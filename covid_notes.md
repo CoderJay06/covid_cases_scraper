@@ -22,6 +22,10 @@ CLI -
 #covid_menu
 - Displays menu of options for user to choose from when application is run
 
+#global_cases 
+- All covid cases globally 
+
+
 Covid - 
 #initialize 
 - Creates objects from scraped covid data
