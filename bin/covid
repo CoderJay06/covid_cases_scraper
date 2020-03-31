@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby 
+require "bundler/setup"
+require "covid19"
+
+puts "Welcome To Covid19 stats Command Line App."
+
+Covid19::CLI.new.start
