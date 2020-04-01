@@ -1,3 +1,3 @@
-class CovidScraper 
+class CovidScraper
 
 end 

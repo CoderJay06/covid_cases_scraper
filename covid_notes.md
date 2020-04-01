@@ -15,22 +15,29 @@ $ covid19
 
 lib Classes: 
 
-CLI - 
+CLI - #=> Controller
 #start 
 - Runs app
 
 #covid_menu
 - Displays menu of options for user to choose from when application is run
+- gets user input 
 
 #global_cases 
 - All covid cases globally 
 
 
-Covid - 
+Covid -  #=> Model
 #initialize 
 - Creates objects from scraped covid data
+
 
 Covid Scraper -
 .scrape_stats
 - Does the scraping of covid statistics 
 - Parsing data
+
+*Scraping data: <div class="maincounter-number"> -> Gloal case # 
+<div class="number-table-main"> -> Active cases # 
+<div class="number-table-main"> -> Closed cases #
+
