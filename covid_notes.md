@@ -41,3 +41,5 @@ Covid Scraper -
 <div class="number-table-main"> -> Active cases # 
 <div class="number-table-main"> -> Closed cases #
 
+ By Country tag:
+ main_table_countries tr
