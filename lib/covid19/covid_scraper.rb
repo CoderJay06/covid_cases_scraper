@@ -2,12 +2,6 @@ module Covid19
 
    class CovidScraper
 
-      def self.open_covid_stats 
-         #binding.pry
-         stats_url = "https://www.worldometers.info/coronavirus/"
-         Nokogiri::HTML(open(stats_url))
-      end 
-
       def self.scrape_covid_stats 
          stats_url = "https://www.worldometers.info/coronavirus/"
          content = Nokogiri::HTML(open(stats_url))
@@ -24,6 +18,19 @@ module Covid19
          # Recovered caes selector: content.css(".maincounter-number span")[2].text
          # Active cases selector: content.css("div.number-table-main").first.text
          # Closed cases selector: content.css("div.number-table-main").last.text
+      end 
+
+      def self.country_scraper
+         @doc = Nokogiri::HTML(open("https://www.worldometers.info/coronavirus/"))
+         @doc.search("#main_table_countries_today tbody:first tr").select do |data|
+            column_name = data.search("td")[0]
+            column_cases = data.search("td")[1]
+
+            country = Covid19::Covid.new 
+            country.country_name = column_name.text.strip 
+            country.country_cases = column_cases.text.strip
+            country.save
+         end 
       end 
 
       # def self.global_case_scraper 

@@ -29,6 +29,9 @@ module Covid19
          when '6'
             all_covid_content
             covid_menu
+         when '7'
+            country_stats
+            covid_menu
          when 'exit'
             puts "Goodbye"
          else  
@@ -46,6 +49,7 @@ module Covid19
          puts "4. Recovered Cases"
          puts "5. Closed Cases"
          puts "6. All Covid19 Cases"
+
       end 
 
       def all_covid_content 
@@ -69,9 +73,13 @@ module Covid19
          puts ""
       end 
 
-      def country_stats 
+      def country_stats
+         # binding.pry
+         Covid19::CovidScraper.country_scraper
          puts "Enter a Country to view there Covid19 Statistics:"
-         country_input = gets.strip.downcase 
+         country_input = gets.strip
+         country_stat = Covid19::Covid.find(country_input) 
+         puts "You selected #{country_stat.country_name} ##{country_stat.country_cases}"
       end
       
 
