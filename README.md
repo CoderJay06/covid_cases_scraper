@@ -2,8 +2,6 @@
 This is a CLI application built in Ruby. It uses Nokogiri for scraping basic global stats on
 Covid 19 cases. This project is still in progress. 
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
