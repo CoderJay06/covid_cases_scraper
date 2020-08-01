@@ -1,6 +1,6 @@
-# Covid19
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/covid19`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Covid19 CLI Scraper
+This is a CLI application built in Ruby. It uses Nokogiri for scraping basic global stats on
+Covid 19 cases. This project is still in progress. 
 
 TODO: Delete this and the text above, and describe your gem
 
