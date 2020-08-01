@@ -5,8 +5,7 @@ module Covid19
          covid_menu 
       end 
 
-      def covid_menu 
-         #binding.pry 
+      def covid_menu
          Covid19::CovidScraper.scrape_covid_stats 
          covid_stats_selection
          user_input = gets.strip.downcase
@@ -49,7 +48,6 @@ module Covid19
          puts "4. Recovered Cases"
          puts "5. Closed Cases"
          puts "6. All Covid19 Cases"
-
       end 
 
       def all_covid_content 
@@ -74,14 +72,11 @@ module Covid19
       end 
 
       def country_stats
-         # binding.pry
          Covid19::CovidScraper.country_scraper
          puts "Enter a Country to view there Covid19 Statistics:"
          country_input = gets.strip
          country_stat = Covid19::Covid.find(country_input) 
          puts "You selected #{country_stat.country_name} ##{country_stat.country_cases}"
       end
-      
-
    end 
 end 
